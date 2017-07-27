@@ -1,15 +1,17 @@
-# This file is used to configure how git behaves when moving data between its database and your working directory.
+# Configuration for moving files between your working directory and the git database.
 
-# Ensure native line endings for these...
+* text=auto
+
+# Commit these with Unix line endings...
 
 # Source code.
 *.svg    text
 *.json   text
-*.js     text
-*.css    text
-*.html   text  diff=html
-*.xml    text  diff=html
-*.sh     text
+*.js     text  eol=lf
+*.css    text  eol=lf  diff=css
+*.html   text  eol=lf  diff=html
+*.xml    text          diff=html
+*.sh     text  eol=lf
 *.bat    text
 
 # Templates and lists.
@@ -35,18 +37,14 @@ CONTRIBUTORS  text
 # Leave line endings alone for these...
 
 # Multimedia and compressed storage.
-*.png   binary
-*.jpg   binary
-*.jpeg  binary
-*.gif   binary
-*.ico   binary
-*.mov   binary
-*.mp4   binary
-*.mp3   binary
-*.flv   binary
-*.fla   binary
-*.swf   binary
-*.gz    binary
-*.zip   binary
-*.7z    binary
-*.ttf   binary
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+*.ico    binary
+*.mov    binary
+*.mp4    binary
+*.mp3    binary
+*.gz     binary
+*.zip    binary
+*.woff2  binary
