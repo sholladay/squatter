@@ -1,4 +1,4 @@
-# squatter [![Build status for Squatter](https://img.shields.io/circleci/project/sholladay/squatter/master.svg "Build Status")](https://circleci.com/gh/sholladay/squatter "Builds")
+# squatter [![Build status for Squatter](https://img.shields.io/circleci/project/sholladay/squatter/master.svg "Build Status")](https://circleci.com/gh/sholladay/squatter "Builds") [![Build status for Squatter on Windows](https://ci.appveyor.com/api/projects/status/5ofux2q7lq6ehk4w/branch/master?svg=true "Windows Build Status")](https://ci.appveyor.com/project/sholladay/squatter "Windows Builds")
 
 > Check if a namespace on npm is being hogged.
 
@@ -71,11 +71,11 @@ A package is high quality (aka *not* a squatter) if it has at least **80%** of:
 
 ### squatter(name)
 
-Returns a `Promise` for a `boolean` of whether the given `name` is being hogged on [npm](https://www.npmjs.com/), as determined by [the algorithm](#algorithm).
+Returns a `Promise` for a `boolean` of whether the name is being hogged on [npm](https://www.npmjs.com/), as determined by [the algorithm](#algorithm).
 
 #### name
 
-Type: `string`
+Type: `string`<br>
 Example: `build-path`
 
 Any valid npm package name.
