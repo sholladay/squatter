@@ -1,0 +1,52 @@
+# This file is used to configure how git behaves when moving data between its database and your working directory.
+
+# Ensure native line endings for these...
+
+# Source code.
+*.svg    text
+*.json   text
+*.js     text
+*.css    text
+*.html   text  diff=html
+*.xml    text  diff=html
+*.sh     text
+*.bat    text
+
+# Templates and lists.
+*.csv         text
+
+# Documentation.
+*.md          text
+*.txt         text
+*.doc         diff
+*.docx        diff
+*.rtf         diff
+*.pdf         diff
+LICENSE       text
+LICENSES      text
+AUTHORS       text
+CONTRIBUTORS  text
+
+# Configuration files.
+.gitignore      text
+.gitattributes  text
+.editorconfig   text
+
+# Leave line endings alone for these...
+
+# Multimedia and compressed storage.
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.mov   binary
+*.mp4   binary
+*.mp3   binary
+*.flv   binary
+*.fla   binary
+*.swf   binary
+*.gz    binary
+*.zip   binary
+*.7z    binary
+*.ttf   binary

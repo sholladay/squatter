@@ -1,0 +1,63 @@
+{
+    "name": "squatter",
+    "version": "0.0.0",
+    "description": "Check if a namespace on npm is being hogged.",
+    "homepage": "https://github.com/sholladay/squatter",
+    "main": "index.js",
+    "author": {
+        "name": "Seth Holladay",
+        "url": "http://seth-holladay.com",
+        "email": "me@seth-holladay.com"
+    },
+    "scripts": {
+        "test": "xo && ava"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:sholladay/squatter.git"
+    },
+    "bugs": {
+        "url": "https://github.com/sholladay/squatter/issues",
+        "email": "me@seth-holladay.com"
+    },
+    "engines": {
+        "node": ">=7.6"
+    },
+    "license": "MPL-2.0",
+    "files": [
+        "index.js"
+    ],
+    "dependencies": {
+        "got": "^7.1.0",
+        "p-every": "^1.0.2",
+        "p-one": "^1.0.0",
+        "package-json": "^4.0.1",
+        "semver": "^5.4.1"
+    },
+    "devDependencies": {
+        "ava": "^0.21.0",
+        "eslint-config-tidy": "^0.5.0",
+        "xo": "^0.18.2"
+    },
+    "keywords": [
+        "squat",
+        "squatter",
+        "squatted",
+        "squatting",
+        "hog",
+        "hogged",
+        "hogging",
+        "unused",
+        "useless",
+        "zombie",
+        "fake",
+        "npm",
+        "registry",
+        "package",
+        "name",
+        "namespace"
+    ],
+    "xo": {
+        "extend": "tidy"
+    }
+}
