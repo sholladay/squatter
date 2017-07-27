@@ -1,6 +1,6 @@
 {
     "name": "squatter",
-    "version": "0.0.0",
+    "version": "0.1.0",
     "description": "Check if a namespace on npm is being hogged.",
     "homepage": "https://github.com/sholladay/squatter",
     "main": "index.js",
