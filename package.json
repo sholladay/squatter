@@ -25,6 +25,7 @@
     },
     "license": "MPL-2.0",
     "files": [
+        "lib",
         "index.js"
     ],
     "dependencies": {
