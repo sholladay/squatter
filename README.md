@@ -80,6 +80,10 @@ Example: `build-path`
 
 Any valid npm package name.
 
+## CLI
+
+See [squatter-cli](https://github.com/sholladay/squatter-cli) to use this on the command line.
+
 ## Contributing
 
 See our [contributing guidelines](https://github.com/sholladay/squatter/blob/master/CONTRIBUTING.md "The guidelines for participating in this project.") for more details.
