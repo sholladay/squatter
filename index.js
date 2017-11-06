@@ -60,11 +60,8 @@ const squatter = async (name, version = 'latest') => {
     const qualityScore = quality.reduce((score, test) => {
         return score + Number(test(pkg, meta));
     }, 0);
-    if (qualityScore >= passingQuality) {
-        return false;
-    }
 
-    return true;
+    return qualityScore < passingQuality;
 };
 
 module.exports = squatter;
