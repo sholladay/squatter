@@ -1,0 +1,11 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/repo
+    docker:
+      - image: circleci/node:8.9
+    steps:
+      - checkout
+      - run: npm install --no-progress
+      - run: npm test
+
