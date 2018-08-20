@@ -101,7 +101,7 @@ test('hasBinaryOrDependent() looks for a binary or dependent', async (t) => {
         { bin : { foo : '' } }
     ];
     await Promise.all(badPkgs.map(async (pkg) => {
-        const err = await t.throws(hasBinaryOrDependent(pkg), TypeError);
+        const err = await t.throwsAsync(hasBinaryOrDependent(pkg), TypeError);
         t.is(err.message, 'A package name is required.');
     }));
 
