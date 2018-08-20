@@ -29,6 +29,7 @@
         "index.js"
     ],
     "dependencies": {
+        "check-npm-dependents": "^1.0.0",
         "got": "^8.0.2",
         "p-every": "^1.0.2",
         "p-one": "^1.0.0",
