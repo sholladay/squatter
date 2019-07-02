@@ -1,6 +1,7 @@
 import test from 'ava';
 import recentPublish from './lib/recent-publish';
 import significantDownloads from './lib/significant-downloads';
+import unpublished from './lib/unpublished';
 import hasReadme from './lib/has-readme';
 import hasBinaryOrDependent from './lib/has-binary-or-dependent';
 import hasProdVersion from './lib/has-prod-version';
@@ -29,7 +30,8 @@ test('squatter() correctly identifies non-squatters', async (t) => {
         'delivr',
         'semver',
         'got',
-        'ava'
+        'ava',
+        'leopard'
     ];
     await Promise.all(nonSquatters.map(async (pkgName) => {
         t.false(await squatter(pkgName), `${pkgName} must not be a squatter`);
@@ -189,4 +191,15 @@ test('hasExtraMaintainer() looks for multiple maintainers', (t) => {
             { name : 'John Doe' }
         ]
     }));
+});
+
+test('unpublished() looks for missing dist-tags and an unpublished time', (t) => {
+    t.false(unpublished({}));
+    t.false(unpublished({ time : { created : '2018' } }));
+    t.false(unpublished({
+        'dist-tags' : {},
+        time        : { unpublished : '2011' }
+    }));
+
+    t.true(unpublished({ time : { unpublished : '2011' } }));
 });
