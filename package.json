@@ -1,65 +1,69 @@
 {
-    "name": "squatter",
-    "version": "0.2.0",
-    "description": "Check if a namespace on npm is being hogged.",
-    "homepage": "https://github.com/sholladay/squatter",
-    "main": "index.js",
-    "author": {
-        "name": "Seth Holladay",
-        "url": "http://seth-holladay.com",
-        "email": "me@seth-holladay.com"
-    },
-    "scripts": {
-        "test": "xo && ava"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git@github.com:sholladay/squatter.git"
-    },
-    "bugs": {
-        "url": "https://github.com/sholladay/squatter/issues",
-        "email": "me@seth-holladay.com"
-    },
-    "engines": {
-        "node": ">=8"
-    },
-    "license": "MPL-2.0",
-    "files": [
-        "lib",
-        "index.js"
-    ],
-    "dependencies": {
-        "check-npm-dependents": "^1.0.0",
-        "got": "^9.0.0",
-        "p-every": "^1.0.2",
-        "p-one": "^1.0.0",
-        "package-json": "^5.0.0",
-        "semver": "^5.4.1"
-    },
-    "devDependencies": {
-        "ava": "^1.0.0-beta.7",
-        "eslint-config-tidy": "^0.6.4",
-        "xo": "^0.22.0"
-    },
-    "keywords": [
-        "squat",
-        "squatter",
-        "squatted",
-        "squatting",
-        "hog",
-        "hogged",
-        "hogging",
-        "unused",
-        "useless",
-        "zombie",
-        "fake",
-        "npm",
-        "registry",
-        "package",
-        "name",
-        "namespace"
-    ],
-    "xo": {
-        "extend": "tidy"
-    }
+  "name": "squatter",
+  "version": "0.2.0",
+  "description": "Check if a namespace on npm is being hogged.",
+  "homepage": "https://github.com/sholladay/squatter",
+  "main": "index.js",
+  "author": {
+    "name": "Seth Holladay",
+    "url": "http://seth-holladay.com",
+    "email": "me@seth-holladay.com"
+  },
+  "scripts": {
+    "test": "xo && ava",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:sholladay/squatter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sholladay/squatter/issues",
+    "email": "me@seth-holladay.com"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "license": "MPL-2.0",
+  "files": [
+    "lib",
+    "index.js"
+  ],
+  "dependencies": {
+    "check-npm-dependents": "^1.0.0",
+    "got": "^9.0.0",
+    "p-every": "^1.0.2",
+    "p-one": "^1.0.0",
+    "package-json": "^5.0.0",
+    "semver": "^5.4.1",
+    "snyk": "^1.189.0"
+  },
+  "devDependencies": {
+    "ava": "^1.0.0-beta.7",
+    "eslint-config-tidy": "^0.6.4",
+    "xo": "^0.22.0"
+  },
+  "keywords": [
+    "squat",
+    "squatter",
+    "squatted",
+    "squatting",
+    "hog",
+    "hogged",
+    "hogging",
+    "unused",
+    "useless",
+    "zombie",
+    "fake",
+    "npm",
+    "registry",
+    "package",
+    "name",
+    "namespace"
+  ],
+  "xo": {
+    "extend": "tidy"
+  },
+  "snyk": true
 }
