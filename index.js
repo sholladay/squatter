@@ -6,6 +6,7 @@ const fetchMeta = require('package-json');
 const getPackage = require('./lib/get-package');
 const recentPublish = require('./lib/recent-publish');
 const significantDownloads = require('./lib/significant-downloads');
+const unpublished = require('./lib/unpublished');
 const hasReadme = require('./lib/has-readme');
 const hasBinaryOrDependent = require('./lib/has-binary-or-dependent');
 const hasProdVersion = require('./lib/has-prod-version');
@@ -39,6 +40,11 @@ const squatter = async (name, version = 'latest') => {
         allVersions  : true,
         fullMetadata : true
     });
+
+    if (unpublished(meta)) {
+        return false;
+    }
+
     const pkg = getPackage(meta, version);
 
     const isExempt = await pOne(exemptions, (test) => {
